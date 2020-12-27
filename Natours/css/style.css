@@ -100,6 +100,17 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+       opacity: 0;
+       transform: translateY(30px);
+    }
+    100% {
+       opacity: 1;
+       transform: translate(0); /*translate 0 means it going to look exactly like it is now*/
+    }
+}
+
 .btn:link, .btn:visited { /*pseudo classes are state of the elements*/
     text-transform: uppercase;
     text-decoration: none;
@@ -107,6 +118,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s; /*all properties will be animated with 'all'*/
+    position: relative;
 }
 .btn:hover {
     transform: translateY(-3px); /*Y axis moves from top to bottom so we have to use neagtive values if we have to move up*/
@@ -119,5 +131,27 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
-
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute; /*absolute finds first relative element*/
+    top: 0;
+    left: 0;
+    z-index: -1; /*-1 means behind the button*/
+    transition: all .4s;
+}
+.btn-white::after {
+    background-color: #fff;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); /*scale increases the size by 1.5 times*/
+    opacity: 0;
+}
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; /*this will apply annimation of 0% to the button*/
 }
