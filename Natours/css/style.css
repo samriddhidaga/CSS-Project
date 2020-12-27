@@ -43,11 +43,12 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); /*it transforms it relative to the overall element and not  parent*/
+    text-align: center;
 }
 .heading-primary {
    color: #fff;
    text-transform: uppercase;
-
+    margin-bottom: 60px;
    backface-visibility: hidden; /*back part of the animation is not visible to the user*/
 }
 .heading-primary-main {
@@ -97,4 +98,26 @@ body {
        opacity: 1;
        transform: translate(0); /*translate 0 means it going to look exactly like it is now*/
     }
+}
+
+.btn:link, .btn:visited { /*pseudo classes are state of the elements*/
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s; /*all properties will be animated with 'all'*/
+}
+.btn:hover {
+    transform: translateY(-3px); /*Y axis moves from top to bottom so we have to use neagtive values if we have to move up*/
+    box-shadow: 0 10px 20px rgba(0,0,0,.2); /*x y blur color*/
+}
+.btn:active { /*active state is when button is clicked*/
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2); /*x y blur color*/
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+
 }
