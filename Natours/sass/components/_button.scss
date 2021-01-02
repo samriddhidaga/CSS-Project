@@ -11,7 +11,7 @@
    }
    &:hover {
        transform: translateY(-3px); /*Y axis moves from top to bottom so we have to use neagtive values if we have to move up*/
-       box-shadow: 0 1rem 2rem rgba($colour-black,.2); /*x y blur color*/
+       box-shadow: 0 1rem 2rem rgba($color-black,.2); /*x y blur color*/
  
        &::after {
           transform: scaleX(1.4) scaleY(1.6); /*scale increases the size by 1.5 times*/
@@ -20,7 +20,7 @@
    }
    &:active { /*active state is when button is clicked*/
        transform: translateY(-1px);
-       box-shadow: 0 .5rem 1rem rgba($colour-black,.2); /*x y blur color*/
+       box-shadow: 0 .5rem 1rem rgba($color-black,.2); /*x y blur color*/
    }
    &--white {
        background-color: $color-white;
