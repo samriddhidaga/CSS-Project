@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: initial;
+}
+
+
+html {
+   font-size: 62.5%; /* 10/16 = .625 i.e 62.5% */
+}
+
+body {
+   box-sizing: border-box; /*Gets rid of extra height width*/
+}

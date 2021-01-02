@@ -1,0 +1,24 @@
+.header {
+    height: 95vh; /*The element will be 95% of the view port*/
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.8) ,rgba($color-primary-dark, 0.8)) ,url(../img/hero.jpg); /*to provide a line gradient above the image*/
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*it will cut the image from bottom by providing all the four coordinates */
+
+    &__logo-box {
+      position: absolute; /*absolute works with reference with parent element i.e header */
+      top: 4rem;
+      left: 4rem;
+    }
+    &__logo {
+      height: 3.5rem;
+   }
+   &__text-box {
+       position: absolute;
+       top: 40%;
+       left: 50%;
+       transform: translate(-50%, -50%); /*it transforms it relative to the overall element and not  parent*/
+       text-align: center;
+   }    
+}
