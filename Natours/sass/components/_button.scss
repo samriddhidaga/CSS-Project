@@ -1,5 +1,5 @@
 .btn {
-
+    &,
     &:link,
     &:visited {
         /*pseudo classes are state of the elements*/
@@ -12,6 +12,9 @@
         /*all properties will be animated with 'all'*/
         position: relative;
         font-size: $default-font-size;
+        
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -27,7 +30,8 @@
         }
     }
 
-    &:active {
+    &:active, &:focus {
+        outline: none;
         /*active state is when button is clicked*/
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
