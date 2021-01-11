@@ -7,6 +7,11 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*it will cut the image from bottom by providing all the four coordinates */
 
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     &__logo-box {
       position: absolute; /*absolute works with reference with parent element i.e header */
       top: 4rem;

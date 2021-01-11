@@ -13,6 +13,7 @@ html {
    // @include respond(phone) {
    //    font-size: 50%;
    // }
+   //700 is less then both 1200 and 900 therefore the last-declaration will apply
 
    @include respond(tab-land) { //width < 1200
       font-size: 56.25%; //1rem = 9px 9/16 = 56.25%
@@ -29,4 +30,9 @@ html {
 
 body {
    box-sizing: border-box; /*Gets rid of extra height width*/
+   padding: 3rem;
+
+   @include respond(tab-port) { //width <900
+      padding: 0;
+   }
 }
